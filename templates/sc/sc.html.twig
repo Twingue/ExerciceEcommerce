@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategorieController!{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+<h1 class="mb-5"> Catégories </h1>
+
+<div class="row col-12 col-sm-4">
+
+      {% for Produit in Produits %}
+      <div class="mb-5">
+      <!-- guitare et basse-->
+      <div class="">
+            {{ Produit.nom }}
+      </div>
+       <div>
+            <img src="/images/{{Produit.image}}"/>
+      </div>
+      </a>
+</div>
+
+    
+        {% endfor %}
+</div>
+<a class="btn btn-primary" href="{{ path('app_guitarebasse') }}">Retour</a>
+</div>
+
+{% endblock %}

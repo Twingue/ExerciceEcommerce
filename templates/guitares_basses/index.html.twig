@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GuitaresBassesController!{% endblock %}
+
+{% block body %}
+
+
+<h1> SousCatégories </h1>
+
+      {% for sousCategorie in sousCategories %}
+
+      <div class="col-12 col-sm-4" >
+      <a href="">
+      <div>
+            {{ sousCategorie.nom }}
+           <img src="/images/{{ sousCategorie.image }}"> 
+      </div>
+      </a>
+      </div>
+        {% endfor %}
+       <a class="btn btn-primary" href="{{ path('app_accueil') }}">Retour</a>
+
+
+{% endblock %}
